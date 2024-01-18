@@ -1,44 +1,42 @@
-# markdown-testing
-
 # Markdown Examples
 
 This repository contains an HTML file showcasing various Markdown syntax examples and corresponding code snippets. The provided HTML file allows you to explore and understand how different Markdown elements are formatted.
 
 ## Table of Contents
 
-- [Headers](#headers)
-- [Emphasis](#emphasis)
-- [Lists](#lists)
-- [Links](#links)
-- [Images](#images)
-- [Blockquotes](#blockquotes)
-- [Code](#code)
-- [Extended Markdown Test](#extended-markdown-test)
-- [Abbreviations](#abbreviations)
-- [Autolinks](#autolinks)
-- [Escaping Characters](#escaping-characters)
-- [Raw HTML](#raw-html)
-- [Superscript in Links](#superscript-in-links)
-- [Strikethrough in Tables](#strikethrough-in-tables)
-- [Script Execution](#script-execution)
-- [Cross-Site Scripting (XSS)](#cross-site-scripting-xss)
-- [External Resource Inclusion](#external-resource-inclusion)
-- [File Inclusion](#file-inclusion)
-- [Malformed Links with JavaScript](#malformed-links-with-javascript)
-- [CSRF Token Manipulation](#csrf-token-manipulation)
-- [Remote Code Execution (RCE) through Shell Commands](#remote-code-execution-rce-through-shell-commands)
-- [Cross-Origin Resource Sharing (CORS) Bypass](#cross-origin-resource-sharing-cors-bypass)
-- [JavaScript Execution in Inline Code](#javascript-execution-in-inline-code)
-- [Local File Inclusion](#local-file-inclusion)
-- [Using Special Characters for Code Injection](#using-special-characters-for-code-injection)
-- [Remote Resource Inclusion](#remote-resource-inclusion)
-- [Data URL Payloads](#data-url-payloads)
-- [Using javascript: in HREF](#using-javascript-in-href)
-- [XSS through Inline Styles](#xss-through-inline-styles)
-- [URL Redirection](#url-redirection)
-- [CSRF Attack](#csrf-attack)
-- [Using JavaScript URIs](#using-javascript-uris)
-- [Inline Math Blocks](#inline-math-blocks)
+- Headers
+- Emphasis
+- Lists
+- Links
+- Images
+- Blockquotes
+- Code
+- Extended Markdown Test
+- Abbreviations
+- Autolinks
+- Escaping Characters
+- Raw HTML
+- Superscript in Links
+- Strikethrough in Tables
+- Script Execution
+- Cross-Site Scripting (XSS)
+- External Resource Inclusion
+- File Inclusion
+- Malformed Links with JavaScript
+- CSRF Token Manipulation
+- Remote Code Execution (RCE) through Shell Commands
+- Cross-Origin Resource Sharing (CORS) Bypass
+- JavaScript Execution in Inline Code
+- Local File Inclusion
+- Using Special Characters for Code Injection
+- Remote Resource Inclusion
+- Data URL Payloads
+- Using javascript: in HREF
+- XSS through Inline Styles
+- URL Redirection
+- CSRF Attack
+- Using JavaScript URIs
+- Inline Math Blocks
 
 ## How to Use
 
