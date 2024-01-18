@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Test</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/themes/material-oceanic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .markdown-example {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 20px;
+            max-width: 500px; /* Set a maximum width for the code boxes */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .markdown-header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .markdown-content {
+            padding: 10px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: block;
+            white-space: pre-wrap;
+            font-size: 14px;
+            max-width: 100%; /* Ensure code doesn't overflow horizontally */
+        }
+
+        .copy-button {
+            cursor: pointer;
+            color: #fff;
+            background-color: #2980b9;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 4px;
+            display: block;
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            transition: background-color 0.3s;
+            font-size: 14px;
+        }
+
+        .copy-button:hover {
+            background-color: #1c6382;
+        }
+    </style>
+</head>
+<body>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Markdown Test</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Headers</h3>
+        <code id="headers"># Markdown Test
+
+## Headers
+
+### Header 3
+
+#### Header 4
+
+##### Header 5
+
+###### Header 6</code>
+
+        <button class="copy-button" data-target="headers" onclick="copyToClipboard('headers')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Emphasis</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Emphasis</h3>
+        <code id="emphasis">*Italic* text using asterisks or _underscores_.<br>
+**Bold** text using double asterisks or __underscores__.<br>
+***Bold and italic*** text using triple asterisks or ___underscores___.</code>
+
+        <button class="copy-button" data-target="emphasis" onclick="copyToClipboard('emphasis')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Lists</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Unordered List</h3>
+        <code id="unorderedList">- Item 1<br>
+- Item 2<br>
+  - Subitem 2.1<br>
+  - Subitem 2.2<br>
+- Item 3</code>
+
+        <button class="copy-button" data-target="unorderedList" onclick="copyToClipboard('unorderedList')">Copy Code</button>
+
+        <h3>Ordered List</h3>
+        <code id="orderedList">1. First item<br>
+2. Second item<br>
+   1. Subitem 2.1<br>
+   2. Subitem 2.2<br>
+3. Third item</code>
+
+        <button class="copy-button" data-target="orderedList" onclick="copyToClipboard('orderedList')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Links</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Links</h3>
+        <code id="links">[GitHub](https://www.github.com) is a code hosting platform for version control and collaboration.</code>
+
+        <button class="copy-button" data-target="links" onclick="copyToClipboard('links')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Images</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Images</h3>
+        <code id="images">![Markdown Logo](https://markdown-here.com/img/icon256.png)</code>
+
+        <button class="copy-button" data-target="images" onclick="copyToClipboard('images')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Blockquotes</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Blockquotes</h3>
+        <code id="blockquotes">> This is a blockquote.<br>
+> It can span multiple lines.</code>
+
+        <button class="copy-button" data-target="blockquotes" onclick="copyToClipboard('blockquotes')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Code</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Code</h3>
+        <code id="inlineCode">Inline `code` can be inserted with backticks.</code>
+
+        <button class="copy-button" data-target="inlineCode" onclick="copyToClipboard('inlineCode')">Copy Code</button>
+
+        <pre><code id="codeBlock">```python
+def hello_world():
+    print("Hello, World!")
+```</code></pre>
+
+        <button class="copy-button" data-target="codeBlock" onclick="copyToClipboard('codeBlock')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Extended Markdown Test</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Table of Contents</h3>
+        <code id="tableOfContents"># Extended Markdown Test
+
+## Table of Contents
+
+- [Headers](#headers)
+- [Emphasis](#emphasis)
+- [Lists](#lists)
+- [Links](#links)
+- [Images](#images)
+- [Blockquotes](#blockquotes)
+- [Code](#code)
+- [Horizontal Rule](#horizontal-rule)
+- [Tables](#tables)
+- [Task Lists](#task-lists)
+- [Definition Lists](#definition-lists)
+- [Code Blocks](#code-blocks)
+- [Strikethrough](#strikethrough)
+- [Fenced Code Blocks with Language Specification](#fenced-code-blocks-with-language-specification)
+- [Footnotes](#footnotes)
+- [Superscript and Subscript](#superscript-and-subscript)
+- [Emoji](#emoji)
+- [LaTeX Math](#latex-math)</code>
+
+        <button class="copy-button" data-target="tableOfContents" onclick="copyToClipboard('tableOfContents')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Abbreviations</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Abbreviations</h3>
+        <code id="abbreviations">*[HTML]: HyperText Markup Language<br>
+*[CSS]: Cascading Style Sheets<br><br>
+HTML is an abbreviation for *[HyperText Markup Language]*, and CSS stands for *[Cascading Style Sheets]*.</code>
+
+        <button class="copy-button" data-target="abbreviations" onclick="copyToClipboard('abbreviations')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Autolinks</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Autolinks</h3>
+        <code id="autolinks"><https://www.example.com> is an example of an autolink.</code>
+
+        <button class="copy-button" data-target="autolinks" onclick="copyToClipboard('autolinks')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Escaping Characters</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Escaping Characters</h3>
+        <code id="escapingCharacters">To display a literal asterisk \* or underscore \_ in Markdown, use a backslash \ before the character.</code>
+
+        <button class="copy-button" data-target="escapingCharacters" onclick="copyToClipboard('escapingCharacters')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Raw HTML</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Raw HTML</h3>
+        <code id="rawHTML"><p>This is a paragraph with raw HTML.</p></code>
+
+        <button class="copy-button" data-target="rawHTML" onclick="copyToClipboard('rawHTML')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Superscript in Links</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Superscript in Links</h3>
+        <code id="superscriptLinks">This is a link with superscript<sup>1</sup>.</code>
+
+        <button class="copy-button" data-target="superscriptLinks" onclick="copyToClipboard('superscriptLinks')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Superscript in Links</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Superscript in Links</h3>
+        <code id="superscriptLinks">This is a link with superscript<sup>1</sup>.</code>
+
+        <button class="copy-button" data-target="superscriptLinks" onclick="copyToClipboard('superscriptLinks')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Strikethrough in Tables</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Strikethrough in Tables</h3>
+        <code id="strikethroughTables">| Product       | Price     | Quantity |
+| ------------- | --------- | -------- |
+| Item 1        | $10       | 5        |
+| Item 2        | $15       | ~~10~~  |
+| Item 3        | $20       | 8        |</code>
+
+        <button class="copy-button" data-target="strikethroughTables" onclick="copyToClipboard('strikethroughTables')">Copy Code</button>
+    </div>
+</div>
+
+
+
+<!-- Add more examples here following the same structure -->
+
+<script>
+    function copyToClipboard(elementId) {
+        const element = document.getElementById(elementId);
+
+        if (!element) {
+            console.error(`Element with ID '${elementId}' not found.`);
+            return;
+        }
+
+        const textContent = element.textContent.trim();
+
+        if (!textContent) {
+            console.error(`No text content found within '${elementId}'.`);
+            return;
+        }
+
+        const textarea = document.createElement('textarea');
+        textarea.value = textContent;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        // Update the button text to indicate successful copy
+        const copyButton = document.querySelector(`button[data-target="${elementId}"]`);
+        if (copyButton) {
+            copyButton.innerText = 'Copied!';
+
+            // Reset the button text after a short delay (optional)
+            setTimeout(() => {
+                copyButton.innerText = 'Copy Code';
+            }, 2000);
+        } else {
+            console.error(`Button for element with ID '${elementId}' not found.`);
+        }
+    }
+</script>
+
+</body>
+</html>
