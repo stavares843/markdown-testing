@@ -13,9 +13,7 @@ This repository contains an HTML file showcasing various Markdown syntax example
 - Code
 - Extended Markdown Test
 - Abbreviations
-- Autolinks
 - Escaping Characters
-- Raw HTML
 - Superscript in Links
 - Strikethrough in Tables
 - Script Execution
@@ -32,7 +30,6 @@ This repository contains an HTML file showcasing various Markdown syntax example
 - Remote Resource Inclusion
 - Data URL Payloads
 - Using javascript: in HREF
-- XSS through Inline Styles
 - URL Redirection
 - CSRF Attack
 - Using JavaScript URIs
